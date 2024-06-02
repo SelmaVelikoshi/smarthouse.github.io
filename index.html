@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Smart House Door Access System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="website_style.css">
+</head>
+
+<body>
+    <header>
+        <h1>IoT SMART HOUSE DOOR Access SYSTEM</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#project-overview">Project Overview</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#components">Components</a></li>
+            <li><a href="#schematics">Schematics</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="project-overview">
+            <h2>Project Overview</h2>
+            <p>The IoT Smart House Door Lock System is a cutting-edge project designed to enhance home security through the integration of various sensors and control mechanisms. The system employs an RFID sensor to authenticate users, an ultrasonic sensor to detect the presence of individuals, and two servo motors to control the opening of the main gate and the house door. Additionally, the system utilizes an ESP8266 module for logging access attempts and providing remote control via a web interface.</p>
+            <p>When a user approaches the system, they must scan their RFID tag. The RFID reader checks the tag against a list of authorized tags. If the tag is authorized, the servo motor connected to the main gate activates, allowing entry. If the tag is not recognized, the system logs the attempt and sends an alert, and the ultrasonic sensor remains deactivated to prevent unauthorized access.</p>
+            <p>Once the main gate is opened, the ultrasonic sensor comes into play. It detects if a person is within a 2-meter range of the door. If presence is detected, the second servo motor is triggered to open the house door, allowing the user to enter. This two-step verification process ensures that only authorized individuals can access the house, even if they manage to get through the main gate.</p>
+            <p>The ESP8266 module is a crucial component of the system, responsible for logging the date and time of each access attempt. This data can be monitored remotely through a web interface, providing homeowners with real-time updates on the status of their entry points. Furthermore, the web interface allows the owner to manually control the door, granting access to visitors who do not have an RFID tag.</p>
+            <p>In the event of an internet failure or RFID system malfunction, a manual override feature is available. A keypad is installed to allow entry using a specific code, ensuring that the security system remains functional under various circumstances.</p>
+        </section>
+
+        <section id="features">
+            <h2>Features</h2>
+            <ul>
+                <li>RFID authentication</li>
+                <li>Ultrasonic sensor for presence detection</li>
+                <li>Servo motors for gate and door control</li>
+                <li>ESP8266 for logging and remote access</li>
+                <li>Manual override with keypad</li>
+            </ul>
+        </section>
+
+        <section id="components">
+            <h2>Components</h2>
+            <div class="slider">
+                <div><img src="download.jpg" alt="Ultrasonic sensor"></div>
+                <div><img src="download (1).jpg" alt="Servo motors"></div>
+                <div><img src="download (2).jpg" alt="RFID sensor"></div>
+                <div><img src="download (3).jpg" alt="NodeMCU ESP8266"></div>
+                <div><img src="download (4).jpg" alt="ARDUINO UNO"></div>
+            </div>
+        </section>
+
+        <section id="schematics">
+            <h2>Schematics</h2>
+            <img src="WhatsApp Image 2024-05-28 at 8.49.00 AM (1).jpeg" alt="Project Schematics">
+            <img src="WhatsApp Image 2024-05-28 at 8.49.00 AM (3).jpeg" alt="Project Schematics">
+            <img src="WhatsApp Image 2024-05-28 at 8.49.00 AM (4).jpeg" alt="Project Schematics">
+        </section>
+
+        <section id="resources">
+            <h2>Resources</h2>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=SwnAum7_zAo&t=61s" target="_blank">YouTube Video</a></li>
+                <li><a href="design2 report draft.docx" target="_blank">Project Document</a></li>
+                <li><a href="IoT smart house system.pptx" target="_blank">PowerPoint Presentation</a></li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>For more information, contact us at <a href="mailto:selmavelikoshi@gmail.com">selmavelikoshi@gmail.com</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 IoT Project Showcase. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                adaptiveHeight: true
+            });
+        });
+    </script>
+</body>
+
+</html>
